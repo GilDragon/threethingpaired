@@ -6,6 +6,8 @@ var app = builder.Build();
 app.MapGet("/add", () => getNum());
 app.MapGet("/add/{lowernumb}/{uppernumb}", (int lowernumb, int uppernumb) => getNum2(lowernumb, uppernumb));
 app.MapGet("/exp/{base1}/{exp}", (int base1, int exp) => getNum3(base1, exp));
+app.MapGet("/factorial/{factnumb}", (int factnumb) => getNum4(factnumb));
+
 
 
 int getNum(){
@@ -32,4 +34,20 @@ int getNum3(int base1, int exp) {
 
     return totalnum;
 }
+
+int getNum4(int factnumb) {
+    
+    var totalnum2 = 1;
+    for 
+        (int i= factnumb; i >= 1; i--) {
+
+    totalnum2 = totalnum2 * i;
+    }
+
+    return totalnum2;
+}
+// if the number is too long =0
+
+
+
 app.Run();
