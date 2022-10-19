@@ -42,6 +42,9 @@ int getNum4(int factnumb) {
         (int i= factnumb; i >= 1; i--) {
 
     totalnum2 = totalnum2 * i;
+        if (factnumb >=31) {
+            return totalnum2 = -10000000; 
+        }
     }
 
     return totalnum2;
